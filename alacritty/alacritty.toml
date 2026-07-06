@@ -1,0 +1,9 @@
+[terminal]
+shell.program = "pwsh.exe"
+shell.args = ["-NoLogo"]
+
+[font]
+size = 12
+
+[font.normal]
+family = "Hack Nerd Font Mono"
