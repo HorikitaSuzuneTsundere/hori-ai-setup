@@ -28,9 +28,9 @@ Follow the steps below to get everything installed and configured.
 
 ## 🛠 Command‑Line Tools
 
-- [ ] **ripgrep (`rg`) & fd**
+- [ ] **ripgrep (`rg`) & fd & ast-grep (`sg`)**
   ```bash
-  cargo install ripgrep fd-find
+  cargo install ripgrep fd-find ast-grep
   ```
 - [ ] **Node.js** (via Chocolatey on Windows)
   ```powershell
