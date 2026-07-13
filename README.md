@@ -89,9 +89,9 @@ The author uses preconfigured plugins to streamline the coding experience:
 2. **Install a plugin** using `bunx`:
    ```bash
    # Install OmO
-   bunx oh-my-openagent@latest install
+   bunx oh-my-openagent install
    # or the slim variant
-   bunx oh-my-opencode-slim@latest install
+   bunx oh-my-opencode-slim install
    ```
    *`bunx` is part of the Bun runtime. If you don't have Bun, install it from [bun.sh](https://bun.sh).*
 
