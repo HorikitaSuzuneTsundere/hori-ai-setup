@@ -15,7 +15,7 @@ Follow the steps below to get everything installed and configured.
 ## 🧱 Compilers & Runtimes
 
 - [ ] **C compiler**
-  - Windows: use the **Visual Studio Installer** (C++ workload) or **MinGW‑w64**
+  - Windows: use the **Visual Studio Installer** (C++ workload)
   - macOS: `xcode-select --install`
   - Linux: `sudo apt install build-essential` (or equivalent)
 - [ ] **Rust compiler**
@@ -28,13 +28,13 @@ Follow the steps below to get everything installed and configured.
 
 ## 🛠 Command‑Line Tools
 
-- [ ] **ripgrep (`rg`) & fd & ast-grep (`sg`)**
+- [ ] **ripgrep (`rg`) & fd**
   ```bash
-  cargo install ripgrep fd-find ast-grep
+  cargo install ripgrep fd-find
   ```
 - [ ] **Node.js** (via Chocolatey on Windows)
   ```powershell
-  choco install nodejs fzf
+  choco install nodejs
   ```
   *On macOS/Linux consider [`fnm`](https://github.com/Schniz/fnm) or `nvm` instead.*
 
@@ -45,16 +45,13 @@ Follow the steps below to get everything installed and configured.
 - [ ] **Alacritty** or **Kitty** (Unix)
   - Alacritty: [alacritty.org](https://alacritty.org/)
   - Kitty: [sw.kovidgoyal.net/kitty](https://sw.kovidgoyal.net/kitty/)
-  - Windows users can also use **Windows Terminal** (preinstalled or from the Microsoft Store)
-- [ ] **PowerShell (`pwsh`)**
-  ```powershell
-  # Windows (if not already installed)
-  winget install --id Microsoft.PowerShell
-
-  # macOS / Linux
-  brew install powershell         # macOS
-  sudo snap install powershell    # Linux (snap)
-  ```
+- [ ] **Windows Terminal** (Windows)
+  - Windows Terminal: (preinstalled or from the Microsoft Store)
+  - [ ] **PowerShell (`pwsh`)**
+    ```powershell
+    # Windows (if not already installed)
+    winget install --id Microsoft.PowerShell
+    ```
 
 ---
 
@@ -78,7 +75,6 @@ Follow the steps below to get everything installed and configured.
 
 The author uses preconfigured plugins to streamline the coding experience:
 
-- **OmO** — combines **OpenAI** and **Moonshot** AI models
 - **OmO-slim** — combines **OpenAI** and **Opencode Go** AI models
 
 ### Setup
@@ -88,9 +84,7 @@ The author uses preconfigured plugins to streamline the coding experience:
 
 2. **Install a plugin** using `bunx`:
    ```bash
-   # Install OmO
-   bunx oh-my-openagent install
-   # or the slim variant
+   # Install OmO slim variant
    bunx oh-my-opencode-slim install
    ```
    *`bunx` is part of the Bun runtime. If you don't have Bun, install it from [bun.sh](https://bun.sh).*
