@@ -71,3 +71,34 @@ Follow the steps below to get everything installed and configured.
   winget install Neovim.Neovim
   ```
   *Optional: kickstart your config with [NvChad](https://nvchad.com/) or [LazyVim](https://www.lazyvim.org/).*
+
+---
+
+## 🔌 OpenCode Plugins
+
+The author uses preconfigured plugins to streamline the coding experience:
+
+- **OmO** — combines **OpenAI** and **Moonshot** AI models
+- **OmO-slim** — combines **OpenAI** and **Opencode Go** AI models
+
+### Setup
+
+1. **Install OpenCode** (if not already present):  
+   *Refer to the official OpenCode documentation for installation instructions for your platform.*
+
+2. **Install a plugin** using `bunx`:
+   ```bash
+   # Install OmO
+   bunx oh-my-openagent@latest install
+   # or the slim variant
+   bunx oh-my-opencode-slim@latest install
+   ```
+   *`bunx` is part of the Bun runtime. If you don't have Bun, install it from [bun.sh](https://bun.sh).*
+
+3. **Before launching OpenCode**, authenticate and refresh the model list:
+   ```bash
+   opencode auth login
+   opencode models --refresh
+   ```
+
+Now you're ready to start coding with OpenCode and your chosen plugin! 🚀
