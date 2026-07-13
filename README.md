@@ -34,7 +34,7 @@ Follow the steps below to get everything installed and configured.
   ```
 - [ ] **Node.js** (via Chocolatey on Windows)
   ```powershell
-  choco install nodejs
+  choco install nodejs fzf
   ```
   *On macOS/Linux consider [`fnm`](https://github.com/Schniz/fnm) or `nvm` instead.*
 
