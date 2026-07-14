@@ -28,15 +28,15 @@ Follow the steps below to get everything installed and configured.
 
 ## 🛠 Command‑Line Tools
 
-- [ ] **ripgrep (`rg`) & fd**
+- [ ] **ripgrep (`rg`) & fd & ast-grep (`sg`)**
   ```bash
-  cargo install ripgrep fd-find
+  cargo install ripgrep fd-find ast-grep
   ```
-- [ ] **Node.js** (via Chocolatey on Windows)
+- [ ] **nodejs & fzf** (via Chocolatey on Windows)  
   ```powershell
-  choco install nodejs
+  choco install nodejs fzf
   ```
-  *On macOS/Linux consider [`fnm`](https://github.com/Schniz/fnm) or `nvm` instead.*
+  *On macOS/Linux consider [`fnm`](https://github.com/Schniz/fnm) or `nvm` for nodejs, and [`Homebrew`](https://brew.sh) (`brew install fzf`) for fzf.*
 
 ---
 
@@ -75,6 +75,7 @@ Follow the steps below to get everything installed and configured.
 
 The author uses preconfigured plugins to streamline the coding experience:
 
+- **OmO** — combines **OpenAI** and **Moonshot** AI models
 - **OmO-slim** — combines **OpenAI** and **Opencode Go** AI models
 
 ### Setup
@@ -84,6 +85,8 @@ The author uses preconfigured plugins to streamline the coding experience:
 
 2. **Install a plugin** using `bunx`:
    ```bash
+   # Install OmO Ultimate
+   bunx oh-my-openagent install
    # Install OmO slim variant
    bunx oh-my-opencode-slim install
    ```
