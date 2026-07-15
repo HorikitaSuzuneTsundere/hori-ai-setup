@@ -75,7 +75,7 @@ Follow the steps below to get everything installed and configured.
 
 The author uses preconfigured plugins to streamline the coding experience:
 
-- **OmO** — combines **OpenAI** and **Moonshot** AI models
+- **OmO** — combines **OpenAI** and **Github Copilot** AI models
 - **OmO-slim** — combines **OpenAI** and **Opencode Go** AI models
 
 ### Setup
@@ -86,9 +86,9 @@ The author uses preconfigured plugins to streamline the coding experience:
 2. **Install a plugin** using `bunx`:
    ```bash
    # Install OmO Ultimate
-   bunx oh-my-openagent install
+   bunx oh-my-openagent@latest install
    # Install OmO slim variant
-   bunx oh-my-opencode-slim install
+   bunx oh-my-opencode-slim@latest install
    ```
    *`bunx` is part of the Bun runtime. If you don't have Bun, install it from [bun.sh](https://bun.sh).*
 
