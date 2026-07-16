@@ -3,7 +3,7 @@ shell.program = "pwsh.exe"
 shell.args = ["-NoLogo"]
 
 [font]
-size = 12
+size = 11.3
 
 [font.normal]
 family = "Hack Nerd Font Mono"
