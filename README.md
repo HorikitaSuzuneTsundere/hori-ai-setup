@@ -5,38 +5,28 @@ Follow the steps below to get everything installed and configured.
 
 ---
 
-## ✅ Prerequisites
-
-- [ ] **Git** — Make sure `git` is available in your global `PATH`
-- [ ] **Nerd Font** — Install [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) for icon support in the terminal
-
----
-
-## 🧱 Compilers & Runtimes
-
-- [ ] **C compiler**
-  - Windows: use the **Visual Studio Installer** (C++ workload)
-  - macOS: `xcode-select --install`
-  - Linux: `sudo apt install build-essential` (or equivalent)
-- [ ] **Rust compiler**
-  ```bash
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  ```
-  Then restart your shell or run `source "$HOME/.cargo/env"`
-
----
-
 ## 🛠 Command‑Line Tools
 
-- [ ] **ripgrep (`rg`) & fd & ast-grep (`sg`)**
-  ```bash
-  cargo install ripgrep fd-find ast-grep
-  ```
-- [ ] **nodejs & fzf** (via Chocolatey on Windows)  
+- [ ] **Bun**
   ```powershell
-  choco install nodejs fzf
+  powershell -c "irm bun.sh/install.ps1 | iex"
   ```
-  *On macOS/Linux consider [`fnm`](https://github.com/Schniz/fnm) or `nvm` for nodejs, and [`Homebrew`](https://brew.sh) (`brew install fzf`) for fzf.*
+  *On macOS/Linux, install with `curl -fsSL https://bun.sh/install | bash`.*
+- [ ] **nodejs** (via Chocolatey on Windows)  
+  ```powershell
+  choco install nodejs
+  ```
+  *On macOS/Linux consider [`fnm`](https://github.com/Schniz/fnm) or `nvm` for nodejs.*
+- [ ] **OpenCode**
+  ```bash
+  npm install -g opencode-ai@latest
+  ```
+  *Works the same on macOS/Linux — just run the command above in your terminal.*
+- [ ] **ast-grep**
+  ```bash
+  npm install -g @ast-grep/cli
+  ```
+  *Same command on macOS and Linux.*
 
 ---
 
@@ -55,35 +45,17 @@ Follow the steps below to get everything installed and configured.
 
 ---
 
-## ✍️ Editor
-
-- [ ] **Neovim**
-  ```bash
-  # macOS / Linux
-  brew install neovim            # macOS
-  sudo apt install neovim        # Debian/Ubuntu
-  sudo pacman -S neovim          # Arch
-
-  # Windows
-  winget install Neovim.Neovim
-  ```
-  *Optional: kickstart your config with [NvChad](https://nvchad.com/) or [LazyVim](https://www.lazyvim.org/).*
-
----
-
 ## 🔌 OpenCode Plugins
 
 The author uses preconfigured plugins to streamline the coding experience:
 
-- **OmO** — combines **OpenAI** and **Github Copilot** AI models
-- **OmO-slim** — combines **OpenAI** and **Opencode Go** AI models
+- **OmO Ultimate** — multi-agent orchestration for OpenCode, mixing models across providers
+- **OmO-slim** — a leaner, token-efficient fork of oh-my-opencode
+- **DCP** — dynamic context pruning that compresses stale conversation content to cut token usage
 
 ### Setup
 
-1. **Install OpenCode** (if not already present):  
-   *Refer to the official OpenCode documentation for installation instructions for your platform.*
-
-2. **Install a plugin** using `bunx`:
+1. **Install a plugin** using `bunx`:
    ```bash
    # Install OmO Ultimate
    bunx oh-my-openagent@latest install
@@ -92,10 +64,21 @@ The author uses preconfigured plugins to streamline the coding experience:
    ```
    *`bunx` is part of the Bun runtime. If you don't have Bun, install it from [bun.sh](https://bun.sh).*
 
-3. **Before launching OpenCode**, authenticate and refresh the model list:
+2. **Before launching OpenCode**, authenticate and refresh the model list:
    ```bash
    opencode auth login
    opencode models --refresh
    ```
 
+3. **Install the DCP plugin**:
+   ```bash
+   opencode plugin @tarquinen/opencode-dcp@latest --global
+   ```
+
 Now you're ready to start coding with OpenCode and your chosen plugin! 🚀
+
+---
+
+## 🩹 Troubleshooting
+
+- **OpenCode can't use `glob` or `ripgrep`** — the bundled ripgrep binary may be uncompressed/missing. Go to `.config/opencode/bin/` and add `rg.exe` there.
