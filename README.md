@@ -64,13 +64,25 @@ The author uses preconfigured plugins to streamline the coding experience:
    ```
    *`bunx` is part of the Bun runtime. If you don't have Bun, install it from [bun.sh](https://bun.sh).*
 
-2. **Before launching OpenCode**, authenticate and refresh the model list:
+2. **Enable background subagents** (required for multi-agent orchestration):
+   ```powershell
+   [System.Environment]::SetEnvironmentVariable("OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS", "true", "User")
+   ```
+   *Restart your terminal after running this so the variable takes effect.*
+
+   *On macOS/Linux, add this to your shell profile (`~/.zshrc`, `~/.bashrc`, etc.) instead:*
+   ```bash
+   export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
+   ```
+   *Then reload with `source ~/.zshrc` (or restart your terminal).*
+
+3. **Before launching OpenCode**, authenticate and refresh the model list:
    ```bash
    opencode auth login
    opencode models --refresh
    ```
 
-3. **Install the DCP plugin**:
+4. **Install the DCP plugin**:
    ```bash
    opencode plugin @tarquinen/opencode-dcp@latest --global
    ```
