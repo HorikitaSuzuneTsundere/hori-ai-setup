@@ -1,6 +1,6 @@
 # 🔧 OpenCode Setup
 
-A minimal, modern development environment powered by Neovim, Rust, and a fast terminal.
+A minimal, modern development environment powered by Bun, Node.js, and the OpenCode CLI, with a fast terminal and a plugin-based workflow on top.
 Follow the steps below to get everything installed and configured.
 
 ---
