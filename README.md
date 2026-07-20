@@ -81,4 +81,4 @@ Now you're ready to start coding with OpenCode and your chosen plugin! 🚀
 
 ## 🩹 Troubleshooting
 
-- **OpenCode can't use `glob` or `ripgrep`** — the bundled ripgrep binary may be uncompressed/missing. Go to `.config/opencode/bin/` and add `rg.exe` there.
+- **OpenCode can't use `glob` or `ripgrep`** — add `rg.exe` to `.config/opencode/bin/` and make sure that folder is on your user `PATH`.
