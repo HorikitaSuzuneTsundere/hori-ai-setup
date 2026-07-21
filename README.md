@@ -55,16 +55,7 @@ The author uses preconfigured plugins to streamline the coding experience:
 
 ### Setup
 
-1. **Install a plugin** using `bunx`:
-   ```bash
-   # Install OmO Ultimate
-   bunx oh-my-openagent@latest install
-   # Install OmO slim variant
-   bunx oh-my-opencode-slim@latest install
-   ```
-   *`bunx` is part of the Bun runtime. If you don't have Bun, install it from [bun.sh](https://bun.sh).*
-
-2. **Enable background subagents** (required for multi-agent orchestration):
+1. **Enable background subagents** (required for multi-agent orchestration):
    ```powershell
    [System.Environment]::SetEnvironmentVariable("OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS", "true", "User")
    ```
@@ -75,6 +66,15 @@ The author uses preconfigured plugins to streamline the coding experience:
    export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
    ```
    *Then reload with `source ~/.zshrc` (or restart your terminal).*
+
+2. **Install a plugin** using `bunx`:
+   ```bash
+   # Install OmO Ultimate
+   bunx oh-my-openagent@latest install
+   # Install OmO slim variant
+   bunx oh-my-opencode-slim@latest install
+   ```
+   *`bunx` is part of the Bun runtime. If you don't have Bun, install it from [bun.sh](https://bun.sh).*
 
 3. **Before launching OpenCode**, authenticate and refresh the model list:
    ```bash
