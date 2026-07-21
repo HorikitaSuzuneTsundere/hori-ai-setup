@@ -1,6 +1,6 @@
 # 🔧 OpenCode Setup
 
-A minimal, modern development environment powered by Bun, Node.js, and the OpenCode CLI, with a fast terminal and a plugin-based workflow on top.
+A minimal, modern development environment powered by Bun, Node.js, Rust, and the OpenCode CLI, with a fast terminal and a plugin-based workflow on top.
 Follow the steps below to get everything installed and configured.
 
 ---
@@ -22,9 +22,14 @@ Follow the steps below to get everything installed and configured.
   npm install -g opencode-ai@latest
   ```
   *Works the same on macOS/Linux — just run the command above in your terminal.*
-- [ ] **ast-grep**
+- [ ] **Rust** (via rustup, needed for `cargo`)
+  ```powershell
+  winget install --id Rustlang.Rustup
+  ```
+  *On macOS/Linux, install with `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`.*
+- [ ] **ast-grep & ripgrep**
   ```bash
-  npm install -g @ast-grep/cli
+  cargo install ast-grep ripgrep --locked
   ```
   *Same command on macOS and Linux.*
 
@@ -93,4 +98,4 @@ Now you're ready to start coding with OpenCode and your chosen plugin! 🚀
 
 ## 🩹 Troubleshooting
 
-- **OpenCode can't use `glob` or `ripgrep`** — add `rg.exe` to `.config/opencode/bin/` and make sure that folder is on your user `PATH`.
+- **OpenCode can't use `glob` or `ripgrep`** — simply install `ripgrep` globally (see the [Command‑Line Tools](#-command-line-tools) section above).
