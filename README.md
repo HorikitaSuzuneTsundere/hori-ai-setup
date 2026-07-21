@@ -98,4 +98,4 @@ Now you're ready to start coding with OpenCode and your chosen plugin! 🚀
 
 ## 🩹 Troubleshooting
 
-- **OpenCode can't use `glob` or `ripgrep`** — simply install `ripgrep` globally (see the [Command‑Line Tools](#-command-line-tools) section above).
+- **OpenCode can't use `glob` or `ripgrep`** — simply install `ripgrep` globally.
